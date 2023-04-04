@@ -6,11 +6,13 @@ def call() {
             steps {
                 script {
                     if (env.app_lang == "nodejs") {
-                sh 'npm install'
-               }
-               if (env.app_lang == "java") {
-                sh 'maven package'
-               }
+                         sh 'npm install'
+        
+                    }
+                    if (env.app_lang == "java") {
+                        sh 'maven package'
+                 
+                    }
                 
 
                 }
