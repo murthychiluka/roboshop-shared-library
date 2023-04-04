@@ -4,7 +4,14 @@ def call() {
     stages {
         stage ('compile/build'){
             steps {
-                echo 'compile&build'
+               if (env.app_lang == "nodejs") {
+                sh 'npm install'
+               }
+               if (env.app_lang == "java") {
+                sh 'maven package'
+               }
+                
+                
             }
 
         }
