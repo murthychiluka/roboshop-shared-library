@@ -1,7 +1,11 @@
 def call() {
     pipeline {
         agent any
-        string(name: 'ENV', defaultValue: '', description: 'Which environment?')
+        parameters {
+            string(name: 'ENV', defaultValue: '', description: 'Which environment?')
+
+        }
+        
         stages {
             stage('Init') {
                 steps {
