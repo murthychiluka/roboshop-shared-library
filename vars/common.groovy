@@ -3,7 +3,7 @@ def compile() {
         sh 'npm install'                 
       }        
                     
-      if (env.app_lang == "java") {
+      if (env.app_lang == "maven") {
         sh 'maven package'           
       }
    
