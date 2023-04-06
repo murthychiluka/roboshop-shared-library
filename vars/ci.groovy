@@ -35,7 +35,7 @@ def call() {
         }
         post {
             failure {
-                mail body: '${component}-pipeline failed' \n ${BUILD_URL}, from: 'murthychiluka@gmail.com', replyTo: '', subject: '${component}-pipeline failed', to: 'murthychiluka@gmail.com'
+                mail body: ${component} - Pipeline Failed \n ${BUILD_URL}, from: 'murthychiluka@gmail.com', replyTo: '', subject: "${component} - Pipeline Failed", to: 'murthychiluka@gmail.com'
             }
         }
 
