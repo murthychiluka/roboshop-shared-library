@@ -7,7 +7,7 @@ def call() {
         stages {
             stage('compile/build') {
                 steps {
-                    sh 'exit 1'
+                    sh 'env'
                     script {
                         common.compile()
                     }
