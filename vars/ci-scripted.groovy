@@ -5,6 +5,7 @@ def call() {
     node ("work station") {
         try {
             stage('compile/build') {
+                sh 'env'
                common.compile()
             }
         
