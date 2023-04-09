@@ -11,14 +11,14 @@ def call() {
                 git branch: 'main', url: 'https://github.com/murthychiluka/catalogue'
                 sh 'ls -l'
             }
-            stage('compile/build') {
-
-                sh 'env'
-                common.compile()
+            if (env.BRANCH_NAME != "main") {
+                stage('compile/build') {
+                  common.compile()
+                }
             }
-        
-            stage('test cases') {
-               common.testcases()
+
+            stage('testcases') {
+              common.testcases()
             }       
             stage('common.codequality') {
                common.codequality()
