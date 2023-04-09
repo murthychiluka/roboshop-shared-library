@@ -6,7 +6,7 @@ def call() {
         try {
             stage('check out code') {
                 sh 'ls -l'
-                cleanWS()
+                cleanWs()
                 sh 'ls -l'
                 git branch: 'main', url: 'https://github.com/murthychiluka/catalogue'
                 sh 'ls -l'
