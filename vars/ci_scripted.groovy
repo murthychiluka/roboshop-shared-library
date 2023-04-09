@@ -2,7 +2,7 @@ def call() {
     if (!env.sonar_extra_opts) {
          env.sonar_extra_opts=""
     }
-    node("work station") {
+    node("workstation") {
         try {
             stage('check out code') {
                 sh 'ls -l'
