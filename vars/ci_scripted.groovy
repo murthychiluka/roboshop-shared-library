@@ -16,10 +16,14 @@ def call() {
                   common.compile()
                 }
             }
+            if (env.TAG_NAME) {
+                stage('testcases') {
+                  common.testcases()
+            }
 
-            stage('testcases') {
-              common.testcases()
-            }       
+            }
+
+                 
             stage('common.codequality') {
                common.codequality()
             }
