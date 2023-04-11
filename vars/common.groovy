@@ -24,7 +24,7 @@ def codequality() {
 }
 
 def prepareArtifacts() {
-  if (app_lang == nodejs) {
+  if (app_lang == "nodejs") {
     sh 'zip -r ${component}-${TAG_NAME}.zip *'
 
   }
