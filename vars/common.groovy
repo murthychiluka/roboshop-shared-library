@@ -28,7 +28,7 @@ def prepareArtifacts() {
     sh 'zip -r ${component}-${TAG_NAME}.zip *'
 
   }
-  sh 'zip -r ${component}-${TAG_NAME}.zip server.js node_modules'
+  
 }
   
   
