@@ -36,7 +36,7 @@ def call() {
             } 
             if (env.GTAG == "true") {
                 stage('package') {
-                  common.testcases()
+                  common.prepareArtifacts()
                 }
                 stage('Artifact upload') {
                   common.testcases()
