@@ -34,7 +34,7 @@ def call() {
                   common.codequality()
                 }   
             } 
-            if (env.GTAG != "true") {
+            if (env.GTAG == "true") {
                 stage('package') {
                   common.testcases()
                 }
