@@ -38,8 +38,8 @@ def call() {
                 stage('package') {
                   common.prepareArtifacts()
                 }
-                stage('Artifact upload') {
-                  common.testcases()
+                stage('Artifact Upload') {
+                  common.artifactUpload()
                 }
             }     
            
