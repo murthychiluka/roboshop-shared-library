@@ -23,7 +23,7 @@ def call() {
 
             }
              
-            stage ('common.codequality') {
+            stage ('codequality') {
                 steps {
                     script {
                         common.codequality()
