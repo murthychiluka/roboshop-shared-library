@@ -1,8 +1,9 @@
 def compile() {
-  if (env.app_lang == "nodejs") {
+  if (app_lang == "nodejs") {
     sh 'npm install' 
-  }             
-  if (env.app_lang == "maven") {
+  } 
+  if(app_lang == "maven") {          
+   
     sh 'mvn package ; mv target/${component}-1.0.jar ${component}.jar'          
   }
    
